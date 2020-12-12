@@ -78,7 +78,31 @@ def room_receipt(room):
     nights = format(total/237, ".0f")
     cash = str(random.randrange(total + 1, total + 9))
     change = int(cash) - int(total)
-    receipt = f'''
+    if total > 999:
+        receipt = f'''
++-------------------------------------+
+|                                     |
+|              Hotel  DC              |
+|                                     |
+|         1640 Riverside Drive        |
+|            Hill Valley, CA          |
+|               867-5309              |
+|                                     |
+|  Room {room}                $ 237      |
+|                                     |
+| # of nights               {nights}         |
+|                                     |
+|  TOTAL                    $ {str(total)}    |
+|  Cash                     $ {cash}    |
+|  Change Due               $ {change}       |
+|                                     |
+|  Item Count:  1                     |
+|                                     |
+|             THANK YOU!         :D_C:|
++-------------------------------------+
+'''
+    else:
+        receipt = f'''
 +-------------------------------------+
 |                                     |
 |              Hotel  DC              |

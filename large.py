@@ -86,9 +86,9 @@ def checking_in(dictionary):
                 "\nCould you please tell me how many people are in your party?\n"))
             if 0 < occupants <= 6:
                 print("***Wonderful! We can accommodate that.***")
-                floor_assigned = random.randrange(1, 10)
+                floor_assigned = str(random.randrange(1, 10))
                 room_on_floor = random.randrange(10, 50)
-                room_assigned = str(floor_assigned) + str(room_on_floor)
+                room_assigned = floor_assigned + str(room_on_floor)
                 restart = True
                 while restart:
                     restart = False
@@ -114,7 +114,7 @@ def checking_in(dictionary):
                     dictionary[floor_assigned] = {
                         room_assigned: occupant_names}
                 name_of_occupants = " & ".join(occupant_names)
-                floor_index = floor_assigned - 1
+                floor_index = int(floor_assigned) - 1
                 print(
                     f"\n\n\n\n***Welcome, {name_of_occupants}!***\n\nWe have you in room {room_assigned} on the {number_fancied_up[floor_index]} floor.\n ")
                 print(hotel_room)
@@ -187,7 +187,11 @@ while active_status:
         print_out = input(
             "\n\nWould you like a print out of the current guests?\n****Hotel Employees Only****\n y or n? \n")
         if print_out.lower() == "y":
-            print(hotel)
+            for floor in hotel:
+                print(f"****Floor {floor}****")
+                for room in hotel[floor]:
+                    guest_list = " & ".join(hotel[floor][room])
+                    print(f"Room number: {room}\nGuests: {guest_list}\n")
             break
         elif print_out.lower() == "n":
             break
