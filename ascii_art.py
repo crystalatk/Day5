@@ -1,6 +1,7 @@
+# This allows me to use different # of nights stayed at the hotel for the checkout:)
 import random
 
-
+# Artwork for initializing the game
 hotel_front = '''
                 ****Welcome to hotel DC****
  Where the beds are hard-coded and the cookies are always warm!
@@ -37,6 +38,8 @@ hotel_front = '''
 
 
 '''
+
+# Artwork for room assigned message upon check-in
 hotel_room = '''
 
 
@@ -65,6 +68,9 @@ _!!!_________!!!___|_____|_ %%%%%%%%%%%%%%%%%%%% _|_____|___|____-____|_
                    `==~@~==========================~@~==`
 
 '''
+
+# This function creates random nights stayed, randomizes the amount paid, and also creates artwork for the receipt.
+# -parameter needed is the room being checked out of.
 
 
 def room_receipt(room):
