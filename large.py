@@ -74,12 +74,10 @@ def checking_in(dictionary):
                 room_on_floor = random.randrange(10, 50)
                 room_assigned = floor_assigned + str(room_on_floor)
                 restart = True
-                floor_taken = False
                 while restart:
                     restart = False
                     for floor in dictionary:
                         if floor_assigned == floor:
-                            floor_taken = True
                             for room in dictionary[floor]:
                                 if room_assigned == room:
                                     floor_assigned = random.randrange(1, 10)
@@ -93,14 +91,14 @@ def checking_in(dictionary):
                 for idx in range(occupants):
                     occupant_names.append(input(
                         f"\nPlease tell me the name of the {number_fancied_up[idx]} guest staying with us this trip.\n"))
-                if floor_taken:
+                if floor_assigned in dictionary:
                     dictionary[floor_assigned][room_assigned] = occupant_names
                 else:
                     dictionary[floor_assigned] = {
                         room_assigned: occupant_names}
                 name_of_occupants = " & ".join(occupant_names)
                 print(
-                    f"\n\n***Welcome, {name_of_occupants}!***\n\nWe have you in room {room_assigned} on floor {floor_assigned}.\n ")
+                    f"\n\n\n\n***Welcome, {name_of_occupants}!***\n\nWe have you in room {room_assigned} on floor {floor_assigned}.\n ")
                 break
             elif occupants < 0:
                 print("At least one person must stay in every room!")
@@ -115,21 +113,25 @@ def checking_out(dictionary):
     while checking_out:
         try:
             room_leaving = int(input("Please tell me your room number: \n"))
-            room = True
-            while room:
+            checking = True
+            while checking:
                 for floor in dictionary:
                     for room in dictionary[floor]:
                         if room_leaving == int(room):
+                            name_of_occupants = " & ".join(
+                                dictionary[floor][room])
+                            print(
+                                f"\n\n\nThank you, {name_of_occupants}.\nWe hope you enjoyed your stay at DC Hotel!\n\n")
                             floor_out = floor
                             room_out = room
                             checking_out = False
-                            room = False
+                            checking = False
                             del dictionary[floor_out][room_out]
                             break
-                if room:
+                if checking:
                     print(
                         "Oops, looks like this room is unoccupied. Please choose an occupied room!")
-                    room = False
+                    checking = False
         except ValueError:
             print("Please enter a valid room number.")
 
@@ -140,7 +142,7 @@ while active_status:
     invalid_response = True
     while invalid_response:
         status_check = input(
-            "Hello! Will you be (choose 1 or 2): \n1. Checking in\n2.Check out\n")
+            "Hello! Will you be (choose 1 or 2): \n1. Checking in\n2. Check out\n")
         invalid_response = False
         if status_check == "1":
             print("\nThat's great! We are so happy to have you.")
