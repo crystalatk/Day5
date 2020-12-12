@@ -10,6 +10,7 @@ Python
 
 - practice Python syntax
 - practice using functions
+- practice creating and using lists
 - practice referencing dictionaries
 - practice removing and adding information to data
 - practice error checking for user input
@@ -17,7 +18,24 @@ Python
 - practice importing into a file
 - use immutable data
 
-## Challenges/Solutions:
+# Christmas List! (Small/Med Exercise)
+
+- Create a list for the user by asking them what they want for Christmas.
+- Find out if they have been naughty or nice.
+- Based on naughty/nice response, give user gifts or send KRAMPUS!
+- Simple project based learning
+
+# Welcome to Hotel DC! (Large Exercise)
+
+- Begin with a dictionary of hotel guests.
+- Ask user if they are checking in or out.
+- Based upon response, assign a room or check out a user.
+- Do not use any room more than once.
+- Input number of guests and their names.
+- Limit guests to six per room.
+- Loop the program so that it goes back to home menu.
+
+## Challenges/Solutions Large Exercise (Hotel):
 
 - because the data was written with the floor before the room number, it was a challenge to check if the room number was taken
   - I used for loops within a while loop. If the number was taken, I reset the room number and then ran the new number through the for loops again to be sure that it was also not taken.
@@ -47,7 +65,17 @@ Python
 - I think that the print the list question should be hidden instead of the way I currently have it. It could be choice 3 on the home screen, but choice three is not shown. And then it could require a password. Or it could be left where it is and require a password. Something more than it has now.
 - Right now, the dictionary is printing out (for employees only!) as a dictionary. I would prefer it read more easily. I plan to work on this next as it will be good extra practice with the dictionary itself.
 
-## Favorite shots!
+# Favorite shots!
+
+## Christmas List:
+
+![Nice Results!](images/nice.png)
+Results of Christmas List if you were nice.
+
+![Naughty Results!](images/krampus.png)
+Results of Christmas List if you were naughty! Look out for KRAMPUS!
+
+## Welcome to Hotel DC!
 
 ![Opening Screen with Ascii Art and main menu](images/Opening.jpg)
 This is the home menu and the opening ascii art.

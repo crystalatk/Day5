@@ -74,6 +74,7 @@ You get:""")
      \   _._  /  `"   <_>
       xxx(o)xx
 """)
+        error = False
 
     else:
         print("Not off to a great start! You need to listen to the question!")
