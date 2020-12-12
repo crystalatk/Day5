@@ -69,19 +69,19 @@ Python
 
 ## Christmas List:
 
-![Nice Results!](images/nice.png)
+![Nice Results!](images/nice.png)  
 Results of Christmas List if you were nice.
 
-![Naughty Results!](images/krampus.png)
+![Naughty Results!](images/krampus.png)  
 Results of Christmas List if you were naughty! Look out for KRAMPUS!
 
 ## Welcome to Hotel DC!
 
-![Opening Screen with Ascii Art and main menu](images/Opening.jpg)
+![Opening Screen with Ascii Art and main menu](images/Opening.jpg)  
 This is the home menu and the opening ascii art.
 
-![Check-in confirmation with Ascii Art](images/room.jpg)
+![Check-in confirmation with Ascii Art](images/room.jpg)  
 This is the confirmation screen once your room has been assigned to you.
 
-![Check-out receipt](images/Receipt.jpg)
+![Check-out receipt](images/Receipt.jpg)  
 This is the receipt that prints once check out has been confirmed. The room number is based upon player input and the nights stayed, total, cash, and change, will be different each time the function is called.
