@@ -127,4 +127,16 @@ def room_receipt(room):
     return receipt
 
 
-room_receipt(231)
+easter_egg = '''
+        ~+
+
+                 *       +
+           '                  |
+       ()    .-.,="``"=.    - o -
+             '=/_       \     |
+          *   |  '=._    |
+               \     `=./`,        '
+            .   '=.__.=' `='      *
+   +                         +
+        O      *        '       .
+'''

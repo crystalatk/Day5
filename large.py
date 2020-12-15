@@ -48,6 +48,8 @@
 # Import Python's pprint module for printing out the list of occupants. https://docs.python.org/3/library/pprint.html
 
 
+# ReWork with more functions that are individually simpler
+
 # ***Starting Imports, Data, and Variables*****
 
 # Import random list of numbers for assigning rooms
@@ -86,6 +88,7 @@ def checking_in(dictionary):
                 "\nCould you please tell me how many people are in your party?\n"))
             if 0 < occupants <= 6:
                 print("***Wonderful! We can accommodate that.***")
+                # Add user input ("Do you have a floor preference?")
                 floor_assigned = str(random.randrange(1, 10))
                 room_on_floor = random.randrange(10, 50)
                 room_assigned = floor_assigned + str(room_on_floor)
@@ -146,7 +149,8 @@ def checking_out(dictionary):
                                 dictionary[floor][room])
                             print(
                                 f"\n\n\nThank you, {name_of_occupants}.\nWe hope you enjoyed your stay at DC Hotel!\n\nHere is your receipt:")
-                            print(room_receipt(room_leaving))
+                            check_out_receipt = room_receipt(room_leaving)
+                            print(check_out_receipt)
                             floor_out = floor
                             room_out = room
                             checking_out = False
